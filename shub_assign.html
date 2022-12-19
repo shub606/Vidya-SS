@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <title>Vidhya skill School</title>
+  </head>
+  <style>
+    body{
+      font-family: "Trirong", serif;
+      background-image:url(https://images.unsplash.com/photo-1606768666853-403c90a981ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80)
+    }
+    .diva {
+      background-color:#2a2547;
+      color: white;
+      display: flex;
+      color: #bae8e8;
+      
+    }
+
+    .divb {
+      background-color: rgb(216, 202, 76);
+      color: white;
+      display: flex;
+      height: 90%;
+      /* background-image: url(https://images.unsplash.com/photo-1606768666853-403c90a981ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmxpZ2h0fGVufDB8fDB8fA%3D%3D&w=1000&q=80); */
+      
+    }
+
+    .divc {
+        background-color: rgba(136, 149, 156);
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .divc1 {
+        background-color: rgba(127, 155, 158, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+    .divc2{
+        background-color: rgb(95, 29, 57);
+        color: rgb(194, 134, 134);
+
+    }
+    .divd{
+        background-color: #2c5d63;
+      color: white;
+      display: flex;
+      width: 80%;
+      flex-direction: column;
+    }
+    .d1{
+        display: flex;
+        justify-content: space-between;
+        background-color: #6c5b7c;
+        color: #141414;
+    }
+    .d2{
+      background-color: #34495e;
+      color: #141414;
+      gap: 2px;
+    }
+    .d1a{
+      color: white;
+      display: flex;
+      color: #272343;
+      font-weight: bold;
+      flex-direction: column;
+      align-items: right;
+    }
+    .d2a{
+        position: relative;
+    }
+    .d2b{
+        font-size: small;
+    }
+    
+  .table, th, td {
+  border: 1px  black;
+  gap: 5px;
+    }
+    .d2c{
+
+      display: flex;
+      justify-content: space-between;
+      border-width: 2px;
+        border-color: #141414;
+
+    }
+    .bookflight{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    img{
+      width: 150px;
+    }
+
+  </style>
+
+  <body>
+    <div class="diva">
+    <h1>Flight Search Engine</h1>
+    </div>
+    <div class="divb">
+      <div class="divc">
+        <div class="divc1">
+          <button>One way</button>
+          <button>Return</button>
+         <input type="text" ,id = "origin" placeholder =" Enter the origin "><br />
+         <input type="text" ,id = "Desti" placeholder=" Enter the destination city"><br />
+          Departure Date :</br>
+           <input type="date"  /><br />
+          Return date : <br/>
+          <input type="date" /><br />
+          Passengers : <input type="number" /> <br />
+          <button onclick="searchfun()">Search</button><br />
+        </div>
+        <div class="divc2"><br/>
+        Refine Flight Search : <input type="range" />
+        </div>
+      </div>
+      <div class="divd">
+        <div class ="d1">         
+            <!-- <h2>   Pune > Delhi > Pune </h2> -->
+            <h2 id="oridest"> </h2>
+            <div class="d1a">
+            <div> Depart: 20-Dec-2022 </div> 
+            <div> Return : 25-Dec-2022 </div>
+        </div>
+        </div>
+        <div class="d2">
+             <div class="d2a">
+                <h2> Rs 9200 <h2>
+                <div class="d2b">
+                    <div> Ai202 </div>
+                    <div class="d2c">
+                    <table class="table">
+                        <tr>
+                          <th>PNQ>DEL</th>
+                          <th>DEL>PNQ</th>
+                        </tr>
+                        <tr>
+                          <td>Depart : 10:00 am</td>
+                          <td>Departure : 11:00 AM</td> 
+                        </tr>
+                        <tr>
+                            <td>Arrival : 9:00 pm</td>
+                            <td>Arrival : 10:00 pm</td> 
+                        </tr>
+                        </table>
+                       <div class="bookflight" > 
+                        <img src="E:\Learnings\VSS\flight_pic.jpg" alt="flight_pic">
+                        <button>Book this flight</button>
+
+                       </div>
+                    </div>
+             </div>
+        </div>    
+     
+       </div> 
+       <div class="d2">
+        <div class="d2a">
+           <h2> Rs 9200 <h2>
+           <div class="d2b">
+               <div> Ai202 </div>
+               <div class="d2c">
+               <table class="table">
+                   <tr>
+                     <th>PNQ>DEL</th>
+                     <th>DEL>PNQ</th>
+                   </tr>
+                   <tr>
+                     <td>Depart : 10:00 am</td>
+                     <td>Departure : 11:00 AM</td> 
+                   </tr>
+                   <tr>
+                       <td>Arrival : 9:00 pm</td>
+                       <td>Arrival : 10:00 pm</td> 
+                   </tr>
+                   </table>
+                  <div class="bookflight" > 
+                   <img src="E:\Learnings\VSS\flight_pic.jpg" alt="flight_pic">
+                   <button>Book this flight</button>
+
+                  </div>
+               </div>
+        </div>
+   </div>    
+
+  </div> 
+    </div>
+    </div>
+<Script>
+  function searchfun(){
+ var varorigin = document.getElementById("origin").value;
+ var vardesti = document.getElementById("Desti").value;
+ document.getElementById("oridest").innerHTML = varorigin + '>' + vardesti + '>' + varorigin;
+
+  }
+     
+
+</Script>
+
+
+  </body>
+</html>

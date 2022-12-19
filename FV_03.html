@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <style>
+    body {
+      padding: 10px 50px;
+    }
+
+    .Formvalidtion {
+      width: 70%;
+      padding: 20px 70px;
+    }
+
+    .myform {
+    }
+    .formerror {
+      color: red;
+    }
+  </style>
+  <body>
+    <h1>This is Form Validation!</h1>
+    <form name="myform" onsubmit="return validateform()" method="post">
+      <div class="Formvalidtion" , id="name">
+        Name: <input type="text" name="fname" required /><span
+          class="formerror"
+        ></span>
+      </div>
+
+      <div class="Formvalidtion" , id="email">
+        Email: <input type="email" name="femail" required /><span
+          class="formerror"
+        ></span>
+      </div>
+
+      <div class="Formvalidtion" ,id="ph">
+        Phone no : <input type="tel" name="fphone" required /><span
+          class="formerror"
+        ></span>
+      </div>
+
+      <div class="Formvalidtion" , id="pswd">
+        Password: <input type="password" name="fpass" required /><span
+          class="formerror"
+        ></span>
+      </div>
+
+      <div class="Formvalidtion" ,id="cpassword">
+        Confirm Password: <input type="password" name="cpass" required />
+        <span class="formerror"></span>
+      </div>
+
+      <input class="but" type="submit" value="submit" />
+    </form>
+    <script>
+      function clearerror() {
+        errors = document.getElementsByClassName("formerror");
+        for (let item of errors) {
+          item.innerHTML = "";
+        }
+      }
+
+      function seterror(id, error) {
+        element = document.getElementById(id);
+        element.getElementsByClassName("formerror")[0].innerHTML = error;
+      }
+
+      function validateform() {
+        var returnval = true;
+        clearerror();
+
+        var vname = document.forms["myform"]["fname"].value;
+        if (vname.length < 5) {
+          seterror("name", "*Length is Too short");
+          returnval = false;
+        }
+
+        var vemail = document.forms["myform"]["femail"].value;
+        if (vemail.length > 20) {
+          seterror(
+            "email",
+            "*Length of email is too long(Accepts upto 20 characters)"
+          );
+          returnval = false;
+        }
+
+        var vpass = document.forms["myform"]["fpass"].value;
+        if (vpass.length != 6) {
+          console.log("vpass:", vpass.length);
+          seterror("pswd", "*Password must be correct");
+          returnval = false;
+        }
+        // var vphone = document.forms["myform"]["fphone"].value;
+        // if (vphone.length != 10) {
+        //   console.log("vphone:", vphone.length);
+        //     seterror("ph", "*Phone no must be of 10 digits")
+        //   returnval = false;
+        // }
+        console.log("RETURNVAL", returnval);
+        return returnval;
+      }
+    </script>
+  </body>
+</html>
